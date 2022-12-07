@@ -30,7 +30,33 @@ namespace dragAndDrop
         private void dragDrop_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            MessageBox.Show(files[0]);
+            string extension = System.IO.Path.GetExtension(files[0]);
+
+            if (extension == "jpg") { 
+                picBoxImage.ImageLocation = files[0];
+            }
+            else
+            {
+                picBoxImage.Hide();
+                label1.Text = "Extension must be a jpg";
+                label1.Text = "Drag and Drop";
+            }
+            
+
+            string username = Environment.UserName;
+            int nProcessors = Environment.ProcessorCount;
+            OperatingSystem OS = Environment.OSVersion;
+            DateTime now = DateTime.Now;
+            System.IO.DriveInfo c = new System.IO.DriveInfo("C");
+            long cDiskSpace = c.AvailableFreeSpace / (1024^3);
+
+            label2.Text = "Username: " + username + "\n" + "Processor Count: " + nProcessors.ToString() + "\n" + OS.ToString() + "\n" +
+                          "Date: " + now + "\n" + "Disk Space (GB): " + cDiskSpace;
+        }
+
+        private void picBoxImage_Click(object sender, EventArgs e)
+        {
+             
         }
     }
 }
