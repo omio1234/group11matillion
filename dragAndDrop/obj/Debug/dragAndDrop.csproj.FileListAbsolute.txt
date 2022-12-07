@@ -1,0 +1,10 @@
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\bin\Debug\dragAndDrop.exe.config
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\bin\Debug\dragAndDrop.exe
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\bin\Debug\dragAndDrop.pdb
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.csproj.AssemblyReference.cache
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.Form1.resources
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.Properties.Resources.resources
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.csproj.GenerateResource.cache
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.csproj.CoreCompileInputs.cache
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.exe
+C:\Users\agg688\source\repos\dragAndDrop\dragAndDrop\obj\Debug\dragAndDrop.pdb
