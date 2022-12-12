@@ -43,18 +43,18 @@ namespace dragAndDrop
             string userDomName = Environment.UserDomainName;
             string username = Environment.UserName;
             DateTime now = DateTime.Now;
-            Double pc = (dInfo.AvailableFreeSpace / (float)dInfo.TotalSize) * 100;
+            //Double pc = (dInfo.AvailableFreeSpace / (float)dInfo.TotalSize) * 100;
 
-            String sysInfoOut = "Processor Architecture: " + processorArch + "\n" +
-                                "Processor Model: " + processorModel + "\n" +
-                                "Processor Level: " + processorLevel + "\n" +
-                                "System Directory: " + sysDir + "\n" +
-                                "Processor Count: " + nProcessors.ToString() + "\n" +
-                                "User Domain Name : " + userDomName + "\n" +
-                                "Username: " + username + "\n" +
-                                OS.ToString() + "\n" +
-                                "Date " + now + "\n" +
-                                "Logical Drives = \n";
+            String sysInfoOut = "Processor Architecture: " + processorArch +
+                                "\nProcessor Model: " + processorModel +
+                                "\nProcessor Level: " + processorLevel +
+                                "\nSystem Directory: " + sysDir +
+                                "\nProcessor Count: " + nProcessors.ToString() +
+                                "\nUser Domain Name : " + userDomName +
+                                "\nUsername: " + username +
+                                "\n" + OS.ToString() +
+                                "\nDate " + now + "\n" +
+                                "\nLogical Drives = \n";
 
             foreach (System.IO.DriveInfo DriveInfo1 in System.IO.DriveInfo.GetDrives())
             {
