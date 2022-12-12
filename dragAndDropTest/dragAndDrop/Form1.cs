@@ -34,16 +34,47 @@ namespace dragAndDrop
             picBoxImage.ImageLocation = files[0];
             DriveInfo dInfo = new DriveInfo("C");
 
-            string username = Environment.UserName;
-            int nProcessors = Environment.ProcessorCount;
             OperatingSystem OS = Environment.OSVersion;
+            string processorArch = Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE");
+            string processorModel = Environment.GetEnvironmentVariable("PROCESSOR_IDENTIFIER");
+            string processorLevel = Environment.GetEnvironmentVariable("PROCESSOR_LEVEL");
+            string sysDir = Environment.SystemDirectory;
+            int nProcessors = Environment.ProcessorCount;
+            string userDomName = Environment.UserDomainName;
+            string username = Environment.UserName;
             DateTime now = DateTime.Now;
             Double pc = (dInfo.AvailableFreeSpace / (float)dInfo.TotalSize) * 100;
 
-            String sysInfoOut = "Username: " + username + "\n" + "Processor Count: " + nProcessors.ToString() + "\n" + OS.ToString() + "\n" +
-            "Date " + now + "\n" + "Disk Free Space = " + dInfo.AvailableFreeSpace + " (" + pc.ToString("0.00") + "%)";
+            String sysInfoOut = "Processor Architecture: " + processorArch + "\n" +
+                                "Processor Model: " + processorModel + "\n" +
+                                "Processor Level: " + processorLevel + "\n" +
+                                "System Directory: " + sysDir + "\n" +
+                                "Processor Count: " + nProcessors.ToString() + "\n" +
+                                "User Domain Name : " + userDomName + "\n" +
+                                "Username: " + username + "\n" +
+                                OS.ToString() + "\n" +
+                                "Date " + now + "\n" +
+                                "Logical Drives = \n";
 
-            label2.Text = sysInfoOut;
+            foreach (System.IO.DriveInfo DriveInfo1 in System.IO.DriveInfo.GetDrives())
+            {
+                try
+                {
+                    sysInfoOut += "\nDrive: " + DriveInfo1.Name +
+                        "\nVolume Label: " + DriveInfo1.VolumeLabel +
+                        "\nDrive Type: " + DriveInfo1.DriveType +
+                        "\nDrive Format: " + DriveInfo1.DriveFormat +
+                        "\nTotal Size: " + DriveInfo1.TotalSize +
+                        "\nAvailable Free Space: " + DriveInfo1.AvailableFreeSpace + "\n";
+
+                }
+                catch
+                {
+                }
+            }
+
+            RichTextBox1.Text = sysInfoOut;
+
 
         }
 

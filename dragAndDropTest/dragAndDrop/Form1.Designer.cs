@@ -34,6 +34,7 @@ namespace dragAndDrop
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.RichTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dragDrop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             this.SuspendLayout();
@@ -92,11 +93,21 @@ namespace dragAndDrop
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // RichTextBox1
+            // 
+            this.RichTextBox1.Location = new System.Drawing.Point(566, 49);
+            this.RichTextBox1.Name = "RichTextBox1";
+            this.RichTextBox1.ReadOnly = true;
+            this.RichTextBox1.Size = new System.Drawing.Size(387, 447);
+            this.RichTextBox1.TabIndex = 3;
+            this.RichTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.RichTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dragDrop);
@@ -118,6 +129,7 @@ namespace dragAndDrop
         private System.Windows.Forms.PictureBox picBoxImage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox RichTextBox1;
     }
 }
 
